@@ -12,7 +12,7 @@ module Session
     @users = User.where(token: params[:auth_token]).first
     if @users.nil? || DateTime.strptime(@users.expires_at.to_s,'%s') < Time.now
       # redirect_to :controller => 'users/omniauth_callbacks', :action => 'google_oauth2'
-      redirect_to 'http://http://localhost:3000/users/auth/google_oauth2'
+      redirect_to user_google_oauth2_omniauth_authorize_path
     end
   end
 
