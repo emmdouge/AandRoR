@@ -17,7 +17,7 @@ class User < ApplicationRecord
       # https://github.com/omniauth/omniauth/wiki/Auth-Hash-Schema
       user.token = auth.credentials.token
       user.expires = auth.credentials.expires
-      user.expires_at = auth.credentials.expires_at
+      user.expires_at = (Time.now+(6*60)).to_i 
       user.refresh_token = auth.credentials.refresh_token
       user.name = auth.info.name
       user.email = auth.info.email
