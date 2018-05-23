@@ -11,9 +11,8 @@ module Session
     # session[:session_id]
     @users = User.where(token: params[:auth_token]).first
     if @users.nil? || DateTime.strptime(@users.expires_at.to_s,'%s') < Time.now
-      byebug 
       # redirect_to :controller => 'users/omniauth_callbacks', :action => 'google_oauth2'
-      redirect_to 'http://localhost:4200/login'
+      redirect_to 'http://http://localhost:3000/users/auth/google_oauth2'
     end
   end
 

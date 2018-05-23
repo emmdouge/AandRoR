@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    byebug
     json_response(User.find(params[:id]))
   end
 end
