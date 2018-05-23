@@ -1,10 +1,10 @@
 {
-  "name": "A2andRoR",
+  "name": "AandRoR",
   "version": "0.0.0",
   "description": "Seed",
   "repository": {
     "type": "git",
-    "url": "https://github.com/emmdouge/A2andRoR"
+    "url": "https://github.com/emmdouge/AandRoR"
   },
   "scripts": {
     "build.tools": "tsc && gulp build.tools --color",
