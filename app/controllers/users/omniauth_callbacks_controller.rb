@@ -24,27 +24,28 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # delete it since it is unedittable if stored
       # must include domain if that is specified in the cookie stored
       # cookies.delete(:key, :domain => 'domain.com')
-      cookies.delete(:cube_user)
-      cookies.delete(:auth_token)
+      # cookies.delete(:cube_user)
+      # cookies.delete(:auth_token)
       # .signed prevents cookie from external modification
       # .encrypted disables modification and viewing(?)
       # did not use cookies.signed[:cube_user] because there was too much garbage attached
-      cookies[:cube_user] = {
-        # .chomp does newlines and carriage returns
-        # .squish removes newlines and spaces
-        :value => Base64.encode64(@user.id.to_s).squish.tr('=', ''),
-        # :expires => 1.year.from_now,
-        :expires => Time.current + 60.minutes,
-        # :domain => 'http://localhost:4200'
-      }
-      cookies[:auth_token] = {
-        # .chomp does newlines and carriage returns
-        # .squish removes newlines and spaces
-        :value => @user.token,
-        # :expires => 1.year.from_now,
-        :expires => Time.current + 60.minutes,
-        # :domain => 'http://localhost:4200'
-      }
+      # cookies[:cube_user] = {
+      #   # .chomp does newlines and carriage returns
+      #   # .squish removes newlines and spaces
+      #   :value => Base64.encode64(@user.id.to_s).squish.tr('=', ''),
+      #   # :expires => 1.year.from_now,
+      #   :expires => Time.current + 60.minutes,
+      #   # :domain => 'http://localhost:4200'
+      # }
+      session[:user_id] = @user.id
+      # cookies[:auth_token] = {
+      #   # .chomp does newlines and carriage returns
+      #   # .squish removes newlines and spaces
+      #   :value => @user.token,
+      #   # :expires => 1.year.from_now,
+      #   :expires => Time.current + 60.minutes,
+      #   # :domain => 'http://localhost:4200'
+      # }
       sign_in @user, :event => :authentication #this will throw if @user is not activated
       set_flash_message(:notice, :success, :kind => "Google") if is_navigational_format?
     else
