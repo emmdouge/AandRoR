@@ -52,11 +52,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
     # url needs http://
     # keeps session since the domain is localhost
-    url = "http://localhost:3000"
-    p = params.merge({:user => @user})
+    # url = "http://localhost:3000"
+    # p = params.merge({:user => @user})
     # redirect_to url p
     # GOOGLE LOGIN
-    redirect_to(url, p)
+    redirect_to root_path
   end
 
 end
