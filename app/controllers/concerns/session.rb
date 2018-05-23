@@ -9,11 +9,11 @@ module Session
     # request.env["rack.request.cookie_hash"]
     # request.cookies
     # session[:session_id]
-    @user = User.where(id: session[:user_id]).first
-    if (@user.nil? || (DateTime.strptime(@users.expires_at.to_s,'%s') < Time.now))
-      # redirect_to :controller => 'users/omniauth_callbacks', :action => 'google_oauth2'
-      redirect_to user_google_oauth2_omniauth_authorize_path
-    end
+    # @user = User.where(id: session[:user_id]).first
+    # if (@user.nil? || (DateTime.strptime(@users.expires_at.to_s,'%s') < Time.now))
+    #   # redirect_to :controller => 'users/omniauth_callbacks', :action => 'google_oauth2'
+    #   redirect_to user_google_oauth2_omniauth_authorize_path
+    # end
   end
 
 end
