@@ -3,6 +3,9 @@
 Devise.setup do |config|
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
+  # for prod DB
+  config.secret_key = 'cf24c11121dcfa12a8290453f3b354c34b289a268425fcc86c15673d095096da39e7206d21ab467a36c7da163d13c108735b785790cfb09acafe1cda84c0a2e6'
+  
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
