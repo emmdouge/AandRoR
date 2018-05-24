@@ -8,7 +8,7 @@ module ActionDispatch
         self.path = path
         # Only if you're on Rails 5+:
         self.file_handler = ActionDispatch::FileHandler.new(
-          "app/client/dist/prod"
+          "client/dist/prod"
         )
         # Only if you're on Rails 4.2:
         # self.file_handler = ActionDispatch::FileHandler.new(
