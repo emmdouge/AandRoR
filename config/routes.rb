@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   # assuming you have a public/index.html, this is what will be served
   # root :controller => 'static', :action => '/public/index.html' 
   root :to => static('index.html')
-  get '/home', to: static('index.html') 
 
   get 'users/new'
   get '/users/:id' => 'users#show'
