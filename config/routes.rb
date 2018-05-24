@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root :controller => 'static', :action => '/public/index.html' 
   root :to => 'static#index'
   get '/', :to => redirect('/index.html')
-  get 'home', :to => static('index.html')
+  get 'home', :to => redirect('/index.html')
 
   get 'js/app.js', :to => static('js/app.js')
   get 'js/shims.js', :to => static('js/shims.js')
