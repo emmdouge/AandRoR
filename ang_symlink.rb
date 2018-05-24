@@ -6,4 +6,4 @@ require 'fileutils'
 # Run in cmd as admin
 # ruby ang_symlink.rb
 # Softlinks to directories are created as symlinkd
-FileUtils.ln_s('./client/dist/prod', './public')
+FileUtils.ln_s('./app/client/dist/prod', './public')

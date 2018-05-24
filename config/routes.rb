@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # assuming you have a public/index.html, this is what will be served
   # root :controller => 'static', :action => '/public/index.html' 
   root :to => 'static#index'
+  get '/', :to => redirect('/index.html')
   get 'home', :to => static('index.html')
 
   get 'js/app.js', :to => static('js/app.js')
