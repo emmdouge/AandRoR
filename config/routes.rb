@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # assign a named route to a static file by passing any non-empty string as :controller 
   # assuming you have a public/index.html, this is what will be served
   # root :controller => 'static', :action => '/public/index.html' 
-  root :to => static('index.html')
+  root :to => 'static#index'
   get 'home', :to => static('index.html')
 
   get 'js/app.js', :to => static('js/app.js')

@@ -1,5 +1,8 @@
 class StaticController < ApplicationController
+
+  include ActionDispatch
+
   def index
-    static("index.html")
+    redirect_to home_path
   end
 end
