@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'js/app.js', :to => static('js/app.js')
   get 'js/shims.js', :to => static('js/shims.js')
   get 'css/main.css', :to => static('css/main.css')
+  get 'assets/favicon/favicon-PROD.ico', :to => static('assets/favicon/favicon-PROD.ico')
 
   get 'users/new'
   get '/users/:id' => 'users#show'
