@@ -8,7 +8,7 @@ module ActionDispatch
         self.path = path
         # Only if you're on Rails 5+:
         self.file_handler = ActionDispatch::FileHandler.new(
-          Rails.configuration.paths["public"].first
+          Rails.configuration.paths["client/dist/prod"].first
         )
         # Only if you're on Rails 4.2:
         # self.file_handler = ActionDispatch::FileHandler.new(
