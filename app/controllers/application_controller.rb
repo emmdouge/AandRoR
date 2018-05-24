@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   include Session
   
   # The user's preexisting session (i.e. as set by other, traditional controllers) will remain intact
-  protect_from_forgery with: :null_session
+  # protect_from_forgery with: :null_session
 
   # before_filter :session_expires, :except => [:login, :logout] 
   # before_filter :update_session_time, :except => [:login, :logout]
