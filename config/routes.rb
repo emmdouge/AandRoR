@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   root :to => static('index.html')
   get 'home', :to => static('index.html')
 
+  get 'js/app.js', :to => static('js/app.js')
+  get 'js/shims.js', :to => static('js/shims.js')
+  get 'css/main.css', :to => static('css/main.css')
+
   get 'users/new'
   get '/users/:id' => 'users#show'
   
