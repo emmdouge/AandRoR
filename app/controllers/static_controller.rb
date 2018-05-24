@@ -3,6 +3,6 @@ class StaticController < ApplicationController
   include ActionDispatch
 
   def index
-    render file: "public/index.html"
+    render file: "/client/dist/prod/index.html"
   end
 end
