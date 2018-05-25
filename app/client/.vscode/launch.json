@@ -8,7 +8,7 @@
       "request": "launch",
       "url": "http://localhost:5555",
       "sourceMaps": true,
-      "webRoot": "${workspaceRoot}/src/client",
+      "webRoot": "${workspaceRoot}/src",
       "sourceMapPathOverrides": {
         "app/*": "${webRoot}/app/*"
       }
@@ -19,7 +19,7 @@
       "request": "attach",
       "port": 9222,
       "sourceMaps": true,
-      "webRoot": "${workspaceRoot}/src/client",
+      "webRoot": "${workspaceRoot}/src",
       "sourceMapPathOverrides": {
         "app/*": "${webRoot}/app/*"
       }
