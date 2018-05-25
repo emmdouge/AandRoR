@@ -5,5 +5,6 @@ require 'fileutils'
 
 # Run in cmd as admin
 # ruby ang_symlink.rb
-# Softlinks to directories are created as symlinkd
+# Softlinks to directories are created as symlink
+# allows localhost base route to work
 FileUtils.ln_s('./app/client/dist/prod', './public')

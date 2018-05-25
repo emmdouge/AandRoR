@@ -3,14 +3,16 @@ Rails.application.routes.draw do
   # assign a named route to a static file by passing any non-empty string as :controller 
   # assuming you have a public/index.html, this is what will be served
   # root :controller => 'static', :action => '/public/index.html' 
+  # if base route is not working on local,
+  # check symlink in local dir, should be folder, not a file 
   root :to => 'static#index'
   get '/', :to => 'static#index'
   get 'home', :to => 'static#index'
 
-  get 'js/app.js', :to => static('js/app.js')
-  get 'js/shims.js', :to => static('js/shims.js')
-  get 'css/main.css', :to => static('css/main.css')
-  get 'assets/favicon/favicon-PROD.ico', :to => static('assets/favicon/favicon-PROD.ico')
+  # get 'js/app.js', :to => static('js/app.js')
+  # get 'js/shims.js', :to => static('js/shims.js')
+  # get 'css/main.css', :to => static('css/main.css')
+  # get 'assets/favicon/favicon-PROD.ico', :to => static('assets/favicon/favicon-PROD.ico')
 
   get 'users/new'
   get '/users/:id' => 'users#show'
