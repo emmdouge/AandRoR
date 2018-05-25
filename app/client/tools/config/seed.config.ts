@@ -206,7 +206,7 @@ export class SeedConfig {
    * The folder of the applications css files.
    * @type {string}
    */
-  CSS_SRC = `${this.APP_SRC}/css`;
+  CSS_SRC = `${this.APP_SRC}/assets/css`;
 
   /**
    * The folder of the e2e specs and framework
@@ -217,7 +217,7 @@ export class SeedConfig {
    * The folder of the applications scss files.
    * @type {string}
    */
-  SCSS_SRC = `${this.APP_SRC}/scss`;
+  SCSS_SRC = `${this.APP_SRC}/styles`;
 
   /**
    * The directory of the applications tools

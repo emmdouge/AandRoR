@@ -66,6 +66,7 @@
     "@angular/router": "^6.0.1",
     "@angular/service-worker": "^6.0.3",
     "@bahmutov/add-typescript-to-cypress": "^2.0.0",
+    "bootstrap": "4.0.0-beta.2",
     "@compodoc/compodoc": "^1.1.1",
     "@types/async": "^2.0.48",
     "@types/browser-sync": "^0.0.39",
@@ -157,5 +158,11 @@
     "webpack": "^4.4.1",
     "yargs": "^11.0.0",
     "zone.js": "~0.8.26"
-  }
+  },
+  "browserslist": [
+    "> 5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "IE 10-11"
+  ]
 }

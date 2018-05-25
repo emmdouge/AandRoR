@@ -18,7 +18,10 @@
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "typeRoots": ["../../node_modules/@types", "../../node_modules"],
-    "types": ["node", "jasmine", "systemjs"]
+    "types": ["node", "jasmine", "systemjs"],
+    "baseUrl": "app",
+    "paths": {
+    }
   },
   "compileOnSave": false,
   "exclude": ["app/main-prod.ts"]
